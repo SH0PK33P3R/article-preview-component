@@ -1,7 +1,7 @@
 # Article preview component
 
 _Current design of the component:_
-<img src="https://i.ibb.co/tPjN92V/screenshot.png"/>
+<img src="https://i.ibb.co/0ZwLGzQ/Screen-Shot-2020-07-04-at-22-53-21.png"/>
 
 All of the data on the page comes from the `data.js` file.
 
