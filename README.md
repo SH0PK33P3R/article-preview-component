@@ -5,5 +5,5 @@
 All of the data on the page comes from the `data.js` file.
 
 - [ ] Responsive
-- [ ] FinishSocial button
+- [ ] Finish social button
 - [x] Dynamic data
