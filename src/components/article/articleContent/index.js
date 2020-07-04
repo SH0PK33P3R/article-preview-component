@@ -18,7 +18,6 @@ const Paragraph = styled.p`
 const TextContent = styled.div`
   font-weight: 500;
   width: 360px;
-  color: hsl(214, 17%, 51%);
   padding: 25px;
 `;
 
