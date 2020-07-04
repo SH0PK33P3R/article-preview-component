@@ -6,6 +6,7 @@ import ArticleContent from "./articleContent";
 const Wrapper = styled.div`
   cursor: pointer;
   display: flex;
+  flex-direction: row;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.06);
@@ -15,13 +16,23 @@ const Wrapper = styled.div`
     transform: translateY(-2px);
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.05);
   }
+
+  @media only screen and (max-width: 750px) {
+    flex-direction: column;
+  }
 `;
 
 const Img = styled.div`
+  height: auto;
   width: 248px;
   background-size: cover;
   background-position: left;
   background-image: ${(props) => `url(${props.src})`};
+
+  @media only screen and (max-width: 750px) {
+    height: 248px;
+    width: auto;
+  }
 `;
 
 const Article = ({ image, ...rest }) => {
