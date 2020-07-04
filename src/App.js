@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+
+import Article from "components/article";
+import { posts, authors } from "data.js";
+
+const Wrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: hsl(210, 46%, 95%);
+`;
+
+const Spacer = styled.div`
+  margin-bottom: ${() => (posts.length > 1 ? "15px" : "0")};
+`;
+
+function getAuthorByName(name) {
+  return authors.find((author) => author.name === name) || authors[0];
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      {posts.map(({ authorName, id, ...rest }) => {
+        return (
+          <Spacer key={id}>
+            <Article authorInfo={getAuthorByName(authorName)} {...rest} />
+          </Spacer>
+        );
+      })}
+    </Wrapper>
   );
 }
 
