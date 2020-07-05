@@ -4,14 +4,14 @@ import styled from "styled-components";
 import ArticleContent from "./articleContent";
 
 const Wrapper = styled.div`
-  cursor: pointer;
   display: flex;
-  flex-direction: row;
+  cursor: pointer;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.06);
-  background-color: #fff;
   transition: 0.2s;
+  flex-direction: row;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.06);
   &:hover {
     transform: translateY(-2px);
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.05);
@@ -23,15 +23,15 @@ const Wrapper = styled.div`
 `;
 
 const Img = styled.div`
-  height: auto;
   width: 248px;
+  height: auto;
   background-size: cover;
   background-position: left;
   background-image: ${(props) => `url(${props.src})`};
 
   @media only screen and (max-width: 750px) {
-    height: 248px;
     width: auto;
+    height: 248px;
   }
 `;
 

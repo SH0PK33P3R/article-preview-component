@@ -8,9 +8,9 @@ import ShareButton from "./shareButton";
 const Wrapper = styled.div`
   display: flex;
   margin-top: 10px;
+  flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
-  flex-direction: row;
 `;
 
 const Footer = ({ authorInfo, date }) => {

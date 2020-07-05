@@ -4,11 +4,11 @@ import styled from "styled-components";
 import Footer from "./footer";
 
 const Title = styled.h1`
+  font-size: 20px;
   margin-top: 0px;
-  color: hsl(217, 19%, 35%);
   font-weight: 700;
   margin-bottom: 10px;
-  font-size: 20px;
+  color: hsl(217, 19%, 35%);
 `;
 const Paragraph = styled.p`
   margin: 0;
@@ -16,9 +16,9 @@ const Paragraph = styled.p`
 `;
 
 const TextContent = styled.div`
-  font-weight: 500;
   width: 360px;
   padding: 25px;
+  font-weight: 500;
 `;
 
 const ArticleContent = ({ title, body, ...rest }) => {
